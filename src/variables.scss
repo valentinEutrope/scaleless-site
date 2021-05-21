@@ -1,0 +1,46 @@
+/* COLORS */
+
+//named colors
+$white: #FDFEFF;
+$black: #030404;
+$rich-black-fogra-39: #090A0C;
+$rich-black-fogra-29: #0C111C;
+$oxford-blue: #18233A;
+$moon-blue: #364E81;
+$smooky-black: #12110F;
+$rainsin-black: #1D1F24;
+$gun-metal: #2D3139;
+$onyx: #363A45;
+$manatee: #8D93A5;
+$ligth-gray: #D1D4DB;
+$dark-gold: #BF8511;
+$mariegold: #EBA71E;
+$rust: #9C3D0E;
+$blues-crayola: #2F73FA;
+$medium-sea-green: #35B368;
+$shamrock-green: #2F9D5B;
+
+//utilities colors
+$primary: $rich-black-fogra-39;
+$secondary: $white;
+$info: $oxford-blue;
+$info-ligth: $moon-blue;
+$info-dark: $rich-black-fogra-29;
+$warning: $dark-gold;
+$warning-ligth: $mariegold;
+$danger: $rust;
+$success: $shamrock-green;
+$success-ligth: $medium-sea-green;
+
+//grays range
+$gray-1: $rainsin-black;
+$gray-2: $gun-metal;
+$gray-3: $onyx;
+$gray-4: $manatee;
+$gray-5: $ligth-gray;
+
+
+/* LAYOUT */
+$base-line-height: 1.2em;
+$base-font-size: 1em;
+
