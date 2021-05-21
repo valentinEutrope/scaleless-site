@@ -1,0 +1,8 @@
+@import "./assets/fonts/fonts.css";
+@import "./variables.scss";
+
+body {
+    font-family: Gotham;
+    line-height: $base-line-height;
+    font-size: $base-font-size;
+}
