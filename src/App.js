@@ -8,12 +8,12 @@ import "./index.scss";
 
 const App = () => {
   return (
-    <div className="container">
-      <Router>
-        <Navbar />
+    <Router>
+      <Navbar />
+      <div className="container">
         <Route path="/" exact component={Home} />
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 };
 
