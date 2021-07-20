@@ -1,24 +1,24 @@
 /* COLORS */
 
 //named colors
-$white: #FDFEFF;
+$white: #fdfeff;
 $black: #030404;
-$rich-black-fogra-39: #090A0C;
-$rich-black-fogra-29: #0C111C;
-$oxford-blue: #18233A;
-$moon-blue: #364E81;
-$smooky-black: #12110F;
-$rainsin-black: #1D1F24;
-$gun-metal: #2D3139;
-$onyx: #363A45;
-$manatee: #8D93A5;
-$ligth-gray: #D1D4DB;
-$dark-gold: #BF8511;
-$mariegold: #EBA71E;
-$rust: #9C3D0E;
-$blues-crayola: #2F73FA;
-$medium-sea-green: #35B368;
-$shamrock-green: #2F9D5B;
+$rich-black-fogra-39: #090a0c;
+$rich-black-fogra-29: #0c111c;
+$oxford-blue: #18233a;
+$moon-blue: #364e81;
+$smooky-black: #12110f;
+$rainsin-black: #1d1f24;
+$gun-metal: #2d3139;
+$onyx: #363a45;
+$manatee: #8d93a5;
+$ligth-gray: #d1d4db;
+$dark-gold: #bf8511;
+$mariegold: #eba71e;
+$rust: #9c3d0e;
+$blues-crayola: #2f73fa;
+$medium-sea-green: #35b368;
+$shamrock-green: #2f9d5b;
 
 //utilities colors
 $primary: $rich-black-fogra-39;
@@ -39,8 +39,8 @@ $gray-3: $onyx;
 $gray-4: $manatee;
 $gray-5: $ligth-gray;
 
-
 /* LAYOUT */
 $base-line-height: 1.2rem;
 $base-font-size: 1.25rem;
-$padding-x-container: 4rem;
+$space-x-container: 4rem;
+$space-y-section: 6rem;

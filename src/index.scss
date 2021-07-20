@@ -1,21 +1,31 @@
 @import "./assets/fonts/fonts.css";
 @import "./variables.scss";
 @import "./components/Navbar/navbar.scss";
+@import "./components/SoundcloudWidget/SoundcloudWidget.scss";
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    font-family: Gotham;
-    line-height: $base-line-height;
-    font-size: $base-font-size;
+  font-family: Gotham;
+  line-height: $base-line-height;
+  font-size: $base-font-size;
 
-    a {
-        text-decoration: none;
-        color: $secondary;        
-    }
+  a {
+    text-decoration: none;
+    color: $secondary;
+  }
 }
 
 .container {
-    padding: 0 $padding-x-container;
+  padding: 0 $space-x-container;
+}
+
+.section {
+  padding: $space-y-section 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 }
