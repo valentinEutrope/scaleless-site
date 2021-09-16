@@ -1,61 +1,69 @@
-import React from "react";
-
-import "./gallery.scss";
+import React, { useState } from "react";
+import { VscArrowSmallRight } from "react-icons/vsc";
 
 const IMAGES = [
-  "https://www.fillmurray.com/520/350",
-  "https://www.fillmurray.com/540/355",
-  "https://www.fillmurray.com/510/360",
-  "https://www.fillmurray.com/320/460",
-  "https://www.fillmurray.com/320/470",
-  "https://www.fillmurray.com/330/480",
-  "https://www.fillmurray.com/340/490",
-  "https://www.fillmurray.com/565/355",
-  "https://www.fillmurray.com/575/355",
-  "https://www.fillmurray.com/585/355",
+  {
+    id: 1,
+    url: "https://www.fillmurray.com/320/460",
+  },
+  {
+    id: 2,
+    url: "https://www.fillmurray.com/320/470",
+  },
+  {
+    id: 3,
+    url: "https://www.fillmurray.com/330/480",
+  },
+  {
+    id: 4,
+    url: "https://www.fillmurray.com/1600/1200",
+  },
+  {
+    id: 5,
+    url: "https://www.fillmurray.com/575/355",
+  },
+  {
+    id: 6,
+    url: "https://www.fillmurray.com/1650/1300",
+  },
 ];
 
 const Gallery = () => {
+  const [cursor, setCursor] = useState(0);
+
+  const handleNextSlide = () => {
+    if (cursor === IMAGES.length - 1) {
+      setCursor(0);
+    } else {
+      setCursor(cursor + 1);
+    }
+  };
+
   return (
     <div className="gallery">
-      <div className="gallery__three-images">
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[0]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[1]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[2]} />
-        </div>
+      <div className="gallery__container">
+        <div
+          className="gallery__back"
+          style={{
+            background: `url(${IMAGES[cursor].url}) no-repeat`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
+        <VscArrowSmallRight
+          className="gallery__icon"
+          size="3em"
+          onClick={() => handleNextSlide()}
+        />
       </div>
-
-      <div className="gallery__four-images">
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[3]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[4]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[5]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[6]} />
-        </div>
-      </div>
-
-      <div className="gallery__three-images">
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[7]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[8]} />
-        </div>
-        <div className="gallery__container">
-          <img className="gallery__image" src={IMAGES[9]} />
-        </div>
-      </div>
+      <div
+        className="gallery__frame"
+        style={{
+          background: `url(${IMAGES[cursor].url}) no-repeat`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
     </div>
   );
 };
