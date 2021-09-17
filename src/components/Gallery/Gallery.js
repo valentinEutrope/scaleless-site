@@ -41,29 +41,28 @@ const Gallery = () => {
 
   return (
     <div className="gallery">
-      <div className="gallery__container">
-        <div
-          className="gallery__back"
-          style={{
-            background: `url(${IMAGES[cursor].url}) no-repeat`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
-        <VscArrowSmallRight
-          className="gallery__icon"
-          size="3em"
-          onClick={() => handleNextSlide()}
-        />
-      </div>
       <div
-        className="gallery__frame"
+        className="gallery__back"
         style={{
           background: `url(${IMAGES[cursor].url}) no-repeat`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       ></div>
+      <div
+        className="gallery__frame"
+        style={{
+          background: `url(${IMAGES[cursor].url}) no-repeat`,
+          backgroundSize: "100% 140%",
+          backgroundPosition: "center",
+        }}
+      >
+        <VscArrowSmallRight
+          className="gallery__icon"
+          size="3em"
+          onClick={() => handleNextSlide()}
+        />
+      </div>
     </div>
   );
 };
