@@ -1,27 +1,52 @@
-$maxHeight: 50rem;
+$maxHeight: 60rem;
 
 .gallery {
   position: relative;
   max-height: $maxHeight;
+  //box-shadow: 0 6px 6px rgba($color: #000, $alpha: 0.2);
 
   &__back {
     position: relative;
     width: 100vw;
     height: $maxHeight;
-    filter: blur(6px);
-    box-shadow: inset 0 0 16rem rgba($color: #000000, $alpha: 0.7);
+    filter: blur(8px);
+    box-shadow: inset 0 0 8rem rgba($color: #fff, $alpha: 0.2),
+      0 0vpx 10px rgba($color: #000, $alpha: 0.2);
+    background-size: cover;
   }
 
   &__frame {
     position: absolute;
-    top: 7.5vw;
-    left: 5vw;
+    top: 0;
+    left: 0;
     z-index: 100;
-    width: 90vw;
-    height: calc($maxHeight - 10rem);
-    box-shadow: -4px 4px 1rem rgba($color: #000000, $alpha: 0.5);
-    opacity: 0.88;
-    box-sizing: border-box;
+    background-size: cover;
+    width: 100vw;
+    height: $maxHeight;
+    box-shadow: -4px 4px 10px rgba($color: #000000, $alpha: 0.75);
+    opacity: 1;
+    transform: scale(0.85);
+  }
+
+  &__next-btn-container {
+    &:hover {
+      .gallery__next {
+        opacity: 1;
+        right: 6.5rem;
+      }
+    }
+  }
+
+  &__next {
+    position: absolute;
+    bottom: 4.3rem;
+    opacity: 0;
+    right: 10rem;
+    z-index: 100;
+    font-size: $small-font;
+    color: $white;
+    pointer-events: none;
+    transition: all 0.6s 0.4s;
   }
 
   &__icon {
@@ -31,15 +56,54 @@ $maxHeight: 50rem;
     z-index: 100;
     cursor: pointer;
     color: $white;
+    padding: 0.5rem;
     transition: all 0.3s ease-in;
 
     &:hover {
-      box-shadow: -12px 0 6px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: -12px 4px 8px 8px rgba(0, 0, 0, 0.4);
       background-color: rgba(255, 255, 255, 0);
     }
+  }
+}
 
-    &::before {
-      content: "Next";
+@media (max-width: $desktop) {
+  .gallery {
+    max-height: $maxHeight - 13rem;
+
+    &__back {
+      height: $maxHeight - 13rem;
+    }
+
+    &__frame {
+      height: $maxHeight - 13rem;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .gallery {
+    max-height: $maxHeight - 18rem;
+
+    &__back {
+      height: $maxHeight - 18rem;
+    }
+
+    &__frame {
+      height: $maxHeight - 18rem;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .gallery {
+    max-height: $maxHeight - 26rem;
+
+    &__back {
+      height: $maxHeight - 26rem;
+    }
+
+    &__frame {
+      height: $maxHeight - 26rem;
     }
   }
 }

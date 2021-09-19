@@ -32,7 +32,7 @@ $danger: $rust;
 $success: $shamrock-green;
 $success-ligth: $medium-sea-green;
 
-//grays range
+/* GRAYS RANGE */
 $gray-1: $rainsin-black;
 $gray-2: $gun-metal;
 $gray-3: $onyx;
@@ -40,7 +40,17 @@ $gray-4: $manatee;
 $gray-5: $ligth-gray;
 
 /* LAYOUT */
-$base-line-height: 1.5rem;
-$base-font-size: 1.25rem;
 $space-x-container: 8rem;
 $space-y-section: 4rem;
+
+/* FONT */
+$base-line-height: 1.5rem;
+$base-font-size: 1.25rem;
+$small-font: 1rem;
+$big-font: 1.75rem;
+
+/* BREAKPOINT */
+$large-desktop: 1444px;
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 426px;

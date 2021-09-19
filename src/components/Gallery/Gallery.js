@@ -1,30 +1,30 @@
 import React, { useState } from "react";
-import { VscArrowSmallRight } from "react-icons/vsc";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const IMAGES = [
   {
     id: 1,
-    url: "https://www.fillmurray.com/320/460",
+    url: "assets/images/_1180898.JPG",
   },
   {
     id: 2,
-    url: "https://www.fillmurray.com/320/470",
+    url: "assets/images/_1180969.JPG",
   },
   {
     id: 3,
-    url: "https://www.fillmurray.com/330/480",
+    url: "assets/images/_1190017.JPG",
   },
   {
     id: 4,
-    url: "https://www.fillmurray.com/1600/1200",
+    url: "assets/images/_1190020.JPG",
   },
   {
     id: 5,
-    url: "https://www.fillmurray.com/575/355",
+    url: "assets/images/_1190066.JPG",
   },
   {
     id: 6,
-    url: "https://www.fillmurray.com/1650/1300",
+    url: "assets/images/_1190071.JPG",
   },
 ];
 
@@ -44,24 +44,25 @@ const Gallery = () => {
       <div
         className="gallery__back"
         style={{
-          background: `url(${IMAGES[cursor].url}) no-repeat`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          background: `center / cover no-repeat url(${IMAGES[cursor].url})`,
         }}
       ></div>
       <div
         className="gallery__frame"
         style={{
-          background: `url(${IMAGES[cursor].url}) no-repeat`,
-          backgroundSize: "100% 140%",
-          backgroundPosition: "center",
+          background: `center / cover no-repeat url(${IMAGES[cursor].url})`,
         }}
       >
-        <VscArrowSmallRight
-          className="gallery__icon"
-          size="3em"
-          onClick={() => handleNextSlide()}
-        />
+        {" "}
+        {/* <img className="gallery__frame" src={IMAGES[cursor].url} /> */}
+        <div className="gallery__next-btn-container">
+          <HiOutlineArrowNarrowRight
+            className="gallery__icon"
+            size="3rem"
+            onClick={() => handleNextSlide()}
+          />
+          <div className="gallery__next">Next</div>
+        </div>
       </div>
     </div>
   );
