@@ -3,9 +3,9 @@ $maxHeight: 60rem;
 .gallery {
   position: relative;
   max-height: $maxHeight;
-  //box-shadow: 0 6px 6px rgba($color: #000, $alpha: 0.2);
 
-  &__back {
+  &__back,
+  &__next-back {
     position: relative;
     width: 100vw;
     height: $maxHeight;
@@ -13,6 +13,11 @@ $maxHeight: 60rem;
     box-shadow: inset 0 0 8rem rgba($color: #fff, $alpha: 0.2),
       0 0vpx 10px rgba($color: #000, $alpha: 0.2);
     background-size: cover;
+  }
+
+  &__next-back {
+    opacity: 0;
+    transform: translateX(100vw);
   }
 
   &__frame {

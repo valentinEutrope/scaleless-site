@@ -5,8 +5,8 @@ const SoundcloudWidget = () => {
     <div className="widget-container">
       <iframe
         title="soundcloud-widget-scaleless"
-        width="100%"
-        height="300"
+        width="800"
+        height="350"
         scrolling="yes"
         frameborder="no"
         allow="autoplay"

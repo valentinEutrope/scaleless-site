@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const IMAGES = [
@@ -30,6 +31,20 @@ const IMAGES = [
 
 const Gallery = () => {
   const [cursor, setCursor] = useState(0);
+  const [handleAnimated, setHandleAnimated] = useState(false);
+  const frameRef = useRef();
+
+  useEffect(() => {
+    if (handleAnimated) {
+      gsap.to(frameRef.current, {
+        opacity: 0,
+        onComplete: () => {
+          handleNextSlide();
+          gsap.to(frameRef.current, { opacity: 1 });
+        },
+      });
+    }
+  }, [handleAnimated, setHandleAnimated]);
 
   const handleNextSlide = () => {
     if (cursor === IMAGES.length - 1) {
@@ -37,6 +52,8 @@ const Gallery = () => {
     } else {
       setCursor(cursor + 1);
     }
+
+    setHandleAnimated(false);
   };
 
   return (
@@ -49,17 +66,16 @@ const Gallery = () => {
       ></div>
       <div
         className="gallery__frame"
+        ref={frameRef}
         style={{
           background: `center / cover no-repeat url(${IMAGES[cursor].url})`,
         }}
       >
-        {" "}
-        {/* <img className="gallery__frame" src={IMAGES[cursor].url} /> */}
         <div className="gallery__next-btn-container">
           <HiOutlineArrowNarrowRight
             className="gallery__icon"
             size="3rem"
-            onClick={() => handleNextSlide()}
+            onClick={() => setHandleAnimated(true)}
           />
           <div className="gallery__next">Next</div>
         </div>
