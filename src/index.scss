@@ -20,6 +20,16 @@ body {
   }
 }
 
+h1 {
+  font-size: $giantSize;
+}
+h2 {
+  font-size: $extraLargeSize;
+}
+h3 {
+  font-size: $veryLargeSize;
+}
+
 .container {
   padding: 0 $space-x-container;
 }
@@ -35,3 +45,4 @@ body {
 
 @import "./components/Navbar/navbar.scss";
 @import "./components/SoundcloudWidget/SoundcloudWidget.scss";
+@import "./components/Bio/bio.scss";

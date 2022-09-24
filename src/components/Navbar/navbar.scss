@@ -1,28 +1,33 @@
 .navbar {
-  &__container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 
-    color: $secondary;
-    background-color: $primary;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  background-color: $primary;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  height: 12rem;
 
-    padding: 2rem $space-x-container;
-    height: 8rem;
+  transition: all 0.3s ease-in-out;
+
+  &--scroll {
+    position: sticky;
+    height: 6rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   }
 
-  &__layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 1rem;
-    width: 100%;
-  }
+  &__item {
+    a {
+      cursor: pointer;
+      user-select: none;
+      color: $secondary;
+      font-size: $veryLargeSize;
+      font-weight: $semiBold;
+      transition: color 0.3s ease;
 
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5rem;
-    grid-auto-columns: minmax(2rem, auto);
-    width: 100%;
+      &:hover {
+        color: $gray4;
+      }
+    }
   }
 }
