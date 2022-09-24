@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -19,4 +19,4 @@ const Navbar = () => {
   );
 };
 
-export default withRouter(Navbar);
+export default Navbar;

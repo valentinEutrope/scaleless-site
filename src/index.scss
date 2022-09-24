@@ -1,11 +1,14 @@
 @import "./assets/fonts/fonts.css";
 @import "./variables.scss";
-@import "./components/Navbar/navbar.scss";
-@import "./components/SoundcloudWidget/SoundcloudWidget.scss";
+
+html {
+  font-size: 10px;
+}
 
 body {
   margin: 0;
   padding: 0;
+  max-width: $large-desktop;
 
   font-family: Gotham;
   line-height: $base-line-height;
@@ -29,3 +32,6 @@ body {
     margin-bottom: 4rem;
   }
 }
+
+@import "./components/Navbar/navbar.scss";
+@import "./components/SoundcloudWidget/SoundcloudWidget.scss";
