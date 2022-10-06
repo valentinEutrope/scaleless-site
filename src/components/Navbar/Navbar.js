@@ -1,22 +1,34 @@
 import React from "react";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import classnames from "classnames";
 
-const Navbar = () => {
+const Tab = ({ tab }) => {
   return (
-    <div className="navbar__container">
-      <div className="navbar__layout">
-        <div className="navbar__items">
-          <div className="navbar__item">
-            <Link to="/bio">Biographie</Link>
-          </div>
-          <div className="navbar__item">Galerie</div>
-          <div className="navbar__item">Evènements</div>
-          <div className="navbar__item">Ecoute</div>
-        </div>
-        <div className="navbar__widget">WIDGET</div>
-      </div>
+    <div className="navbar__item">
+      <Link to={`#${tab.link}`}>{tab.title}</Link>
     </div>
   );
 };
 
-export default withRouter(Navbar);
+const Navbar = () => {
+  const tabs = [
+    { title: "Biographie", link: "#bio" },
+    { title: "Galerie", link: "#gallery" },
+    { title: "Evènements", link: "#events" },
+    { title: "Ecoute", link: "#listen" },
+  ];
+
+  return (
+    <div
+      className={classnames("navbar", "container", {
+        "navbar--scroll": false,
+      })}
+    >
+      {tabs.map((tab) => (
+        <Tab key={tab.title} tab={tab} />
+      ))}
+    </div>
+  );
+};
+
+export default Navbar;

@@ -1,12 +1,14 @@
 @import "./assets/fonts/fonts.css";
 @import "./variables.scss";
-@import "./components/Navbar/navbar.scss";
-@import "./components/Gallery/gallery.scss";
-@import "./components/SoundcloudWidget/SoundcloudWidget.scss";
+
+html {
+  font-size: 10px;
+}
 
 body {
   margin: 0;
   padding: 0;
+  max-width: $large-desktop;
 
   font-family: Gotham;
   line-height: $base-line-height;
@@ -16,6 +18,16 @@ body {
     text-decoration: none;
     color: $secondary;
   }
+}
+
+h1 {
+  font-size: $giantSize;
+}
+h2 {
+  font-size: $extraLargeSize;
+}
+h3 {
+  font-size: $veryLargeSize;
 }
 
 .container {
@@ -34,3 +46,7 @@ body {
     margin-bottom: 2rem;
   }
 }
+
+@import "./components/Navbar/navbar.scss";
+@import "./components/SoundcloudWidget/SoundcloudWidget.scss";
+@import "./components/Bio/bio.scss";

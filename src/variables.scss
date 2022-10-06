@@ -32,25 +32,37 @@ $danger: $rust;
 $success: $shamrock-green;
 $success-ligth: $medium-sea-green;
 
-/* GRAYS RANGE */
-$gray-1: $rainsin-black;
-$gray-2: $gun-metal;
-$gray-3: $onyx;
-$gray-4: $manatee;
-$gray-5: $ligth-gray;
+//grays range
+$gray1: $rainsin-black;
+$gray2: $gun-metal;
+$gray3: $onyx;
+$gray4: $manatee;
+$gray5: $ligth-gray;
 
 /* LAYOUT */
-$space-x-container: 8rem;
-$space-y-section: 4rem;
+$base-line-height: 1.4rem;
+$base-font-size: 1.6rem;
+$space-x-container: 12rem;
+$space-y-section: 6rem;
 
-/* FONT */
-$base-line-height: 1.5rem;
-$base-font-size: 1.25rem;
-$small-font: 1rem;
-$big-font: 1.75rem;
+/* Breakpoints */
+$large-desktop: 1920px;
+$desktop: 1600px;
+$tablet: 1280px;
+$mobile: 480px;
 
-/* BREAKPOINT */
-$large-desktop: 1444px;
-$desktop: 1024px;
-$tablet: 768px;
-$mobile: 426px;
+/* Typo */
+
+//sizes
+$tinySize: 1.1rem;
+$smallSize: 1.4rem;
+$regularSize: 1.6rem;
+$largeSize: 1.8rem;
+$veryLargeSize: 2.1rem;
+$extraLargeSize: 2.5rem;
+$giantSize: 3.2rem;
+
+//weight
+$bold: 700;
+$semiBold: 500;
+$regular: 400;

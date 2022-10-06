@@ -2,17 +2,17 @@ import React from "react";
 
 import Gallery from "../../components/Gallery";
 import SoundcloudWidget from "../../components/SoundcloudWidget";
+import Bio from "../../components/Bio";
 
 const Home = () => {
   return (
-    <div>
-      <div className="section">
-        <Gallery />
-      </div>
-      <div className="section">
-        <h2 className="section__title">Ecoute</h2>
-        <SoundcloudWidget />
-      </div>
+    <div className="section">
+      <h2 className="section__title">Biographie</h2>
+      <Bio />
+      <h2 className="section__title">Gallerie</h2>
+      <Gallery />
+      <h2 className="section__title">Ecoute</h2>
+      <SoundcloudWidget />
     </div>
   );
 };
