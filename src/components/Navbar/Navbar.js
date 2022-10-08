@@ -24,6 +24,7 @@ const Navbar = () => {
         "navbar--scroll": false,
       })}
     >
+      <img width="60" src="assets/images/logo-white.png" alt="logo" />
       {tabs.map((tab) => (
         <Tab key={tab.title} tab={tab} />
       ))}
