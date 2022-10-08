@@ -8,7 +8,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  max-width: $large-desktop;
 
   font-family: Gotham;
   line-height: $base-line-height;
@@ -34,8 +33,8 @@ h3 {
   padding: 0 $space-x-container;
 }
 
-.section {
-  padding: $space-y-section 0;
+.layout {
+  margin: $space-y-section 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,10 +42,11 @@ h3 {
 
   &__title {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 }
 
 @import "./components/Navbar/navbar.scss";
 @import "./components/SoundcloudWidget/SoundcloudWidget.scss";
 @import "./components/Bio/bio.scss";
+@import "./components/Gallery/gallery.scss";

@@ -5,7 +5,7 @@ import classnames from "classnames";
 const Tab = ({ tab }) => {
   return (
     <div className="navbar__item">
-      <Link to={`#${tab.link}`}>{tab.title}</Link>
+      <Link to={`${tab.link}`}>{tab.title}</Link>
     </div>
   );
 };
@@ -13,7 +13,7 @@ const Tab = ({ tab }) => {
 const Navbar = () => {
   const tabs = [
     { title: "Biographie", link: "#bio" },
-    { title: "Galerie", link: "#gallery" },
+    { title: "Galeries", link: "#gallery" },
     { title: "Evènements", link: "#events" },
     { title: "Ecoute", link: "#listen" },
   ];
