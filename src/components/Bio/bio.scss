@@ -1,7 +1,12 @@
 .bio {
   display: flex;
   justify-content: center;
-  margin: 0 30rem;
+  margin: 0 6rem;
   line-height: 2.7rem;
   font-size: $largeSize;
+
+  p {
+    max-width: 70rem;
+    text-align: justify;
+  }
 }
