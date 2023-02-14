@@ -1,9 +1,9 @@
 import React from "react";
 
-import Gallery from "../../components/Gallery";
-import SoundcloudWidget from "../../components/SoundcloudWidget";
-import Bio from "../../components/Bio";
-import images from "../../config/images.json";
+import Gallery from "components/Gallery";
+import SoundcloudWidget from "components/SoundcloudWidget";
+import Bio from "components/Bio";
+import images from "config/images.json";
 
 const Home = () => {
   return (

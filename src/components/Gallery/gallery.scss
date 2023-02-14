@@ -60,12 +60,12 @@ $maxHeight: 90rem;
     position: absolute;
     bottom: 4.4rem;
     opacity: 0;
-    right: 14rem;
+    right: 15rem;
     z-index: 100;
     font-size: $regularSize;
     color: $white;
     pointer-events: none;
-    transition: all 0.6s 0.4s;
+    transition: all 0.5s 0.25s;
   }
 
   &__next-icon {
