@@ -1,19 +1,28 @@
 import React from "react";
 
+import Introduction from "components/Introduction";
 import Gallery from "components/Gallery";
-import SoundcloudWidget from "components/SoundcloudWidget";
+import Listen from "components/Listen";
 import Bio from "components/Bio";
+import Title from "components/Title";
 import images from "config/images.json";
 
 const Home = () => {
   return (
-    <div className="layout">
-      <h2 className="layout__title">Biographie</h2>
-      <Bio />
-      <h2 className="layout__title">Galeries</h2>
-      <Gallery images={images.mistrust} />
-      <h2 className="layout__title">Ecoute</h2>
-      <SoundcloudWidget />
+    <div className="home">
+      <Introduction />
+      <div className="section">
+        <Title>Biographie</Title>
+        <Bio />
+      </div>
+      <div className="section">
+        <Title>Galeries</Title>
+        <Gallery images={images.mistrust} />
+      </div>
+      <div className="section">
+        <Title>Ecoute</Title>
+        <Listen />
+      </div>
     </div>
   );
 };
