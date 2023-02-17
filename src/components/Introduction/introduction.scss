@@ -1,0 +1,26 @@
+.introduction {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0 9rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .introduction {
+    img {
+      width: 60rem;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .introduction {
+    img {
+      width: 80rem;
+    }
+  }
+}

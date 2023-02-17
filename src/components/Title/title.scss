@@ -1,0 +1,15 @@
+.title {
+  text-transform: uppercase;
+  font-size: $veryLargeSize;
+  font-weight: $semiBold;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 80%;
+  border-bottom: 1px solid $primary;
+}
+
+@media screen and (min-width: $tablet) {
+  .title {
+    width: 50%;
+  }
+}
