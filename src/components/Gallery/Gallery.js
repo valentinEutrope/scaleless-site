@@ -14,7 +14,7 @@ const Gallery = ({ images }) => {
   };
 
   return (
-    <div className="gallery">
+    <div id="gallery" className="gallery">
       {images.map((image, index) => {
         return (
           <div

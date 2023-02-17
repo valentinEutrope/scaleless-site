@@ -1,12 +1,22 @@
 .bio {
   display: flex;
   justify-content: center;
-  margin: 0 6rem;
+  margin: 0;
   line-height: 2.7rem;
-  font-size: $largeSize;
+  font-size: $regularSize;
+  color: $gray1;
 
   p {
-    max-width: 70rem;
-    text-align: justify;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .bio {
+    font-size: $largeSize;
+
+    p {
+      text-align: justify;
+    }
   }
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const Bio = () => {
   return (
-    <div className="bio">
+    <div id="bio" className="bio container">
       <p>
         A l’aube de l’été 2022, le groupe composé de 5 musiciens aguerris ont
         entrepris l’aventure palpitante de reforger dans les flammes ardentes du
