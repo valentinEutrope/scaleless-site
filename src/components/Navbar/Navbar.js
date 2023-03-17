@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
-import { AiOutlineMenu } from "react-icons/ai";
 import useClickOutside from "utils/useClickOutside";
+import BurgerMenu from "./BurgerMenu";
 
 const handleClickMenu = (isActiveSidebar, setIsActiveSidebar) => {
   if (isActiveSidebar) {
@@ -15,45 +15,17 @@ const handleClickMenu = (isActiveSidebar, setIsActiveSidebar) => {
 const Logo = () => {
   return (
     <a className="logo" href="/">
-      <img width="60" src="assets/images/logo-white.png" alt="logo" />
+      <img width="60" src="assets/images/logo-white.png" alt="Logo Scaleless" />
     </a>
   );
 };
 
-const BurgerMenu = ({
-  tabs,
-  isActiveSidebar,
-  setIsActiveSidebar,
-  sidebarRef,
-}) => {
-  return (
-    <div className="burger-menu">
-      <AiOutlineMenu
-        id="burger-icon"
-        fontSize="large"
-        color="white"
-        onClick={() => handleClickMenu(isActiveSidebar, setIsActiveSidebar)}
-      />
-      <div
-        className={classnames("sidebar", {
-          open: isActiveSidebar,
-        })}
-        ref={sidebarRef}
-      >
-        {tabs.map((tab) => (
-          <div className="sidebar__item">
-            <Link to={`${tab.link}`}>{tab.title}</Link>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const Tab = ({ tab }) => {
+const Tab = ({ tab, index }) => {
   return (
     <div className="navbar__item">
-      <Link to={`${tab.link}`}>{tab.title}</Link>
+      <Link tabIndex={index} to={`${tab.link}`}>
+        {tab.title}
+      </Link>
     </div>
   );
 };
@@ -89,10 +61,11 @@ const Navbar = () => {
         isActiveSidebar={isActiveSidebar}
         setIsActiveSidebar={setIsActiveSidebar}
         sidebarRef={sidebarRef}
+        handleClickMenu={handleClickMenu}
       />
       <div className="navbar__tabs">
-        {tabs.map((tab) => (
-          <Tab key={tab.title} tab={tab} />
+        {tabs.map((tab, index) => (
+          <Tab key={tab.title} tab={tab} index={index} />
         ))}
       </div>
     </div>
