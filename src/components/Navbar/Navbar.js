@@ -50,7 +50,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div
+    <nav
       className={classnames("navbar", "container", {
         "navbar--scroll": false,
       })}
@@ -68,7 +68,7 @@ const Navbar = () => {
           <Tab key={tab.title} tab={tab} index={index} />
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 
