@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Introduction = () => {
   const imageUrl = "assets/images/introduction.png";
