@@ -25,7 +25,7 @@ const BurgerMenu = ({
         ref={sidebarRef}
       >
         {tabs.map((tab) => (
-          <div className="sidebar__item">
+          <div className="sidebar__item" key={`sidebar-item-${tab.title}`}>
             <Link to={`${tab.link}`}>{tab.title}</Link>
           </div>
         ))}
