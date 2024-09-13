@@ -1,12 +1,14 @@
 import * as prismic from "@prismicio/client";
-import env from "react-dotenv";
 
 // Fill in your repository name
-export const repositoryName = env.REACT_APP_PRISMIC_REPOSITORY_NAME || "";
-export const entryPoint = env.REACT_APP_PRISMIC_ENTRY_POINT;
-export const accessToken = env.REACT_APP_PRISMIC_ACCESS_TOKEN;
+export const repositoryName =
+  import.meta.env.VITE_PRISMIC_REPOSITORY_NAME || "";
+export const entryPoint = import.meta.env.VITE_PRISMIC_ENTRY_POINT;
+export const accessToken = import.meta.env.VITE_PRISMIC_ACCESS_TOKEN;
 
-console.log("API : ", env.REACT_APP_PRISMIC_REPOSITORY_NAME);
+console.log("repositoryName : ", repositoryName);
+console.log("entryPoint : ", entryPoint);
+console.log("accessToken : ", accessToken);
 
 export const client = prismic.createClient(repositoryName, {
   accessToken,

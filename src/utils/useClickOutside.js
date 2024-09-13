@@ -1,7 +1,7 @@
-
+import { useEffect } from "react";
 
 const useClickOutside = (ref, onClickOutside, excludedTargets = []) => {
-  React.useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (
         ref.current &&
