@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
-import Introduction from "components/Introduction";
-import Gallery from "components/Gallery";
-import Listen from "components/Listen";
-import Bio from "components/Bio";
-import Title from "components/Title";
-import images from "config/images.json";
+import Introduction from "@/components/Introduction";
+import Gallery from "@/components/Gallery";
+import Listen from "@/components/Listen";
+import Bio from "@/components/Bio";
+import Title from "@/components/Title";
+import images from "@/config/images.json";
 
 interface SectionInterface {
   title: string;

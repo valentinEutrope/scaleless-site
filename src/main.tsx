@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { PrismicProvider } from "@prismicio/react";
-import { client } from "./services/Prismic/prismic";
+import { client } from "./services/Prismic/prismic.ts";
 import App from "./App.tsx";
 
 import "./index.scss";
