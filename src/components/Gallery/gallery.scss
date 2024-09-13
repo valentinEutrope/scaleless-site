@@ -69,15 +69,17 @@ $maxHeight: 90rem;
   }
 
   &__next-icon {
-    @include action-btn;
-
     bottom: 2rem;
     right: 2rem;
+    
+    & {
+      @include action-btn
+    };
   }
 
   &__scale-icon {
-    @include action-btn;
     right: 0;
+    @include action-btn;
   }
 
   &--max-scale {

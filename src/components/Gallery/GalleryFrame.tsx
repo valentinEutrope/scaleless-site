@@ -1,14 +1,21 @@
-import React from "react";
+
 import classnames from "classnames";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { AiOutlineArrowsAlt } from "react-icons/ai";
+
+interface GalleryFrameInterface {
+  imageUrl: string;
+  isMaxScale: boolean;
+  setIsMaxScale: (value: boolean) => void;
+  handleNextSlide: () => void;
+}
 
 const GalleryFrame = ({
   imageUrl,
   isMaxScale,
   setIsMaxScale,
   handleNextSlide,
-}) => {
+}: GalleryFrameInterface) => {
   return (
     <div
       className={classnames("gallery-frame", {
