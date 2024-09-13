@@ -1,4 +1,3 @@
-import React from "react";
 import { PrismicRichText, useFirstPrismicDocument } from "@prismicio/react";
 
 const Bio = () => {
