@@ -2,7 +2,8 @@ import * as prismic from "@prismicio/client";
 // import env from "react-dotenv";
 
 // Fill in your repository name
-export const repositoryName = process.env.REACT_APP_PRISMIC_REPOSITORY_NAME;
+export const repositoryName =
+  process.env.REACT_APP_PRISMIC_REPOSITORY_NAME || "";
 export const entryPoint = process.env.REACT_APP_PRISMIC_ENTRY_POINT;
 export const accessToken = process.env.REACT_APP_PRISMIC_ACCESS_TOKEN;
 

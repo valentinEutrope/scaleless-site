@@ -33,7 +33,7 @@ h3 {
   margin-bottom: 6rem;
 }
 
-@import "./Layout/layout.scss";
+@import "./components/Layout/layout";
 @import "./components/Introduction/introduction.scss";
 @import "./components/Navbar/navbar.scss";
 @import "./components/Footer/footer.scss";

@@ -1,5 +1,4 @@
-
-
+import { ReactElement } from "react";
 import Introduction from "components/Introduction";
 import Gallery from "components/Gallery";
 import Listen from "components/Listen";
@@ -7,7 +6,12 @@ import Bio from "components/Bio";
 import Title from "components/Title";
 import images from "config/images.json";
 
-const Section = ({ title, children }) => {
+interface SectionInterface {
+  title: string;
+  children: ReactElement;
+}
+
+const Section = ({ title, children }: SectionInterface) => {
   return (
     <div className="section">
       <Title>{title}</Title>
