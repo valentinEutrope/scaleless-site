@@ -1,40 +1,40 @@
-import { defineConfig, loadEnv } from "vite";
-import react from "@vitejs/plugin-react";
-import viteTsconfigPaths from "vite-tsconfig-paths";
-import { fileURLToPath, URL } from "url";
-import path from "path";
+import { defineConfig, loadEnv } from 'vite'
+import react from '@vitejs/plugin-react'
+import viteTsconfigPaths from 'vite-tsconfig-paths'
+import { fileURLToPath, URL } from 'url'
+import path from 'path'
 
 const getSrcAliases = (srcFolders: string[]): { [key: string]: string } =>
   srcFolders.reduce((acc, srcFolder) => {
-    const aliasPath = "src/" + srcFolder;
+    const aliasPath = 'src/' + srcFolder
 
     return {
       ...acc,
       [srcFolder]: path.resolve(__dirname, aliasPath),
-    };
-  }, {});
+    }
+  }, {})
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
+  const env = loadEnv(mode, process.cwd(), '')
 
   const srcFolders = [
-    "utils",
-    "components",
-    "services",
-    "assets",
-    "pages",
-    "hooks",
-    "types",
-    "styles",
-    "config",
-  ];
+    'utils',
+    'components',
+    'services',
+    'assets',
+    'pages',
+    'hooks',
+    'types',
+    'styles',
+    'config',
+  ]
 
   const aliases = {
     ...{
-      public: path.resolve(__dirname, "./public"),
+      public: path.resolve(__dirname, './public'),
     },
     ...getSrcAliases(srcFolders),
-  };
+  }
 
   return {
     plugins: [react(), viteTsconfigPaths()],
@@ -43,18 +43,13 @@ export default defineConfig(({ mode }) => {
       port: 3000,
     },
     resolve: {
-      alias: [
-        {
-          find: "@",
-          replacement: fileURLToPath(new URL("./src", import.meta.url)),
-        },
-      ],
+      alias: aliases,
     },
     build: {
-      outDir: "build",
+      outDir: 'build',
     },
     define: {
       __APP_ENV__: JSON.stringify(env.APP_ENV),
     },
-  };
-});
+  }
+})

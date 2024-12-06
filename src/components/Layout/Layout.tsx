@@ -1,8 +1,13 @@
 
+import { ReactElement } from "react";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 
-const Layout = ({ children }) => {
+interface LayoutInterface {
+  children: ReactElement;
+}
+
+const Layout = ({ children }: LayoutInterface) => {
   return (
     <>
       <Navbar />
