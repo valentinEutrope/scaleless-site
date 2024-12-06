@@ -1,5 +1,10 @@
 @import "./assets/fonts/fonts.css";
-@import "./variables.scss";
+@import "./style/breakpoints";
+@import "./style/colors";
+@import "./style/fonts";
+@import "./style/layout";
+@import "./style/fonts";
+@import "./style/sizes";
 
 html {
   font-size: 10px;
@@ -9,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: Gotham;
+  font-family: $main-family;
   line-height: $base-line-height;
   font-size: $base-font-size;
 
