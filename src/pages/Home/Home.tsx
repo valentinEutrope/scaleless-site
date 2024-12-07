@@ -30,7 +30,7 @@ const Home = () => {
     },
     {
       title: 'galeries',
-      content: <Gallery images={images.mistrust} />,
+      content: <Gallery images={images.official} />,
     },
     {
       title: 'écoute',

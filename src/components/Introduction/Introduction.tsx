@@ -1,13 +1,12 @@
-
-
 const Introduction = () => {
-  const imageUrl = "assets/images/introduction.png";
+  // const imageUrl = "assets/images/introduction.png";
+  const imageUrl = 'https://i.goopics.net/szenmo.jpg'
 
   return (
-    <div className="introduction container">
-      <img src={imageUrl} alt="introduction_image" />
+    <div className="introduction">
+      <img src={imageUrl} alt="Scaleless official image band" />
     </div>
-  );
-};
+  )
+}
 
-export default Introduction;
+export default Introduction
