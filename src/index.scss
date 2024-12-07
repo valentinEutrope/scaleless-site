@@ -1,10 +1,10 @@
-@import "./assets/fonts/fonts.css";
-@import "./style/breakpoints";
-@import "./style/colors";
-@import "./style/fonts";
-@import "./style/layout";
-@import "./style/fonts";
-@import "./style/sizes";
+@import './assets/fonts/fonts.css';
+@import './style/breakpoints';
+@import './style/colors';
+@import './style/fonts';
+@import './style/layout';
+@import './style/fonts';
+@import './style/sizes';
 
 html {
   font-size: 10px;
@@ -21,6 +21,11 @@ body {
   a {
     text-decoration: none;
     color: $secondary;
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: $gray5;
+    }
   }
 }
 
@@ -33,16 +38,19 @@ h2 {
 h3 {
   font-size: $veryLargeSize;
 }
+h4 {
+  font-size: $largeSize;
+}
 
 .section {
   margin-bottom: 6rem;
 }
 
-@import "./components/Layout/layout";
-@import "./components/Introduction/introduction.scss";
-@import "./components/Navbar/navbar.scss";
-@import "./components/Footer/footer.scss";
-@import "./components/Listen/listen.scss";
-@import "./components/Bio/bio.scss";
-@import "./components/Gallery/gallery.scss";
-@import "./components/Title/title.scss";
+@import './components/Layout/layout';
+@import './components/Introduction/introduction.scss';
+@import './components/Navbar/navbar.scss';
+@import './components/Footer/footer.scss';
+@import './components/Listen/listen.scss';
+@import './components/Bio/bio.scss';
+@import './components/Gallery/gallery.scss';
+@import './components/Title/title.scss';

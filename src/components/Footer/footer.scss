@@ -3,4 +3,23 @@
   color: $secondary;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+  &-socials {
+    a {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 0.6rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
 }

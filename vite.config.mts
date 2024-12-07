@@ -41,6 +41,13 @@ export default defineConfig(({ mode }) => {
     server: {
       open: false, // automatically open the app in the browser
       port: 3000,
+      proxy: {
+        '/prismic-api': {
+          target: 'https://scaleless.cdn.prismic.io/api/v2',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/prismic-api/, ''),
+        },
+      },
     },
     resolve: {
       alias: aliases,
