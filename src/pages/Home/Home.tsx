@@ -13,16 +13,14 @@ interface SectionInterface {
 
 const Section = ({ title, children }: SectionInterface) => {
   return (
-    <div className="section">
+    <section className="section">
       <Title>{title}</Title>
       {children}
-    </div>
+    </section>
   )
 }
 
 const Home = () => {
-  // const [document] = useSinglePrismicDocument('homepage')
-
   const sections = [
     {
       title: 'biographie',

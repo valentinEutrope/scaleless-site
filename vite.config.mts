@@ -1,7 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import viteTsconfigPaths from 'vite-tsconfig-paths'
-import { fileURLToPath, URL } from 'url'
 import path from 'path'
 
 const getSrcAliases = (srcFolders: string[]): { [key: string]: string } =>
@@ -41,13 +40,6 @@ export default defineConfig(({ mode }) => {
     server: {
       open: false, // automatically open the app in the browser
       port: 3000,
-      proxy: {
-        '/prismic-api': {
-          target: 'https://scaleless.cdn.prismic.io/api/v2',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/prismic-api/, ''),
-        },
-      },
     },
     resolve: {
       alias: aliases,

@@ -1,11 +1,19 @@
+import { getCloudinaryImage } from 'services/cloudinary/cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+
 const Introduction = () => {
-  // const imageUrl = "assets/images/introduction.png";
-  const imageUrl = 'https://i.goopics.net/szenmo.jpg'
+  const cloudinaryImage = getCloudinaryImage('official_2', {
+    size: {
+      width: 4800,
+      height: 2900,
+    },
+    quality: 90,
+  })
 
   return (
-    <div className="introduction">
-      <img src={imageUrl} alt="Scaleless official image band" />
-    </div>
+    <section className="introduction">
+      <AdvancedImage cldImg={cloudinaryImage} loading="lazy" alt="Scaleless official image band" />
+    </section>
   )
 }
 
