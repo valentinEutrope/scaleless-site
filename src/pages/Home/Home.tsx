@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { ReactElement, Suspense } from 'react'
 import Introduction from 'components/Introduction'
 import Gallery from 'components/Gallery'
 import Listen from 'components/Listen'
@@ -42,7 +42,9 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Introduction />
+      <Suspense fallback={<div>Chargement...</div>}>
+        <Introduction />
+      </Suspense>
       {sections.map((section) => (
         <Section key={`section-${section.title}`} title={section.title}>
           {section.content}

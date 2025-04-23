@@ -1,10 +1,18 @@
-@import './assets/fonts/fonts.css';
+@import './assets/fonts/index.css';
 @import './style/breakpoints';
 @import './style/colors';
 @import './style/fonts';
 @import './style/layout';
-@import './style/fonts';
 @import './style/sizes';
+
+@import './components/Layout/layout';
+@import './components/Introduction/introduction';
+@import './components/Navbar/navbar';
+@import './components/Footer/footer';
+@import './components/Listen/listen';
+@import './components/Bio/bio';
+@import './components/Gallery/gallery';
+@import './components/Title/title';
 
 html {
   font-size: 10px;
@@ -45,12 +53,3 @@ h4 {
 .section {
   margin-bottom: 6rem;
 }
-
-@import './components/Layout/layout';
-@import './components/Introduction/introduction.scss';
-@import './components/Navbar/navbar.scss';
-@import './components/Footer/footer.scss';
-@import './components/Listen/listen.scss';
-@import './components/Bio/bio.scss';
-@import './components/Gallery/gallery.scss';
-@import './components/Title/title.scss';
